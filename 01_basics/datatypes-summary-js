@@ -1,0 +1,44 @@
+//Primitive  :-call by value(isme jab hum koi data kahin copy karna hota hai to ye hume refenece nhi deta kahi copy  karke deta hai to jo changes hote hai vo copy me hota hai)
+
+// 7 types : String,number,boolean,null,undefined,symbol, Bigint
+
+const score =100
+const scoreValue =100.3
+
+const isLoggedIn =false
+const outsideTemp = null
+let userEmail;
+
+const id =Symbol('123')
+const anotherId = Symbol('123')
+
+console.log(id === anotherId );
+
+const bigNumber = 327236542635673267n;
+
+//Non-Primitive :-call by references
+
+//Array,objects, functions
+
+const heros =["shaktimaan", "naagraj","doga"];
+let myObj ={
+    name:"hitesh",
+    age:22
+}
+const myFunction =function(){
+
+    console.log("hello");
+
+}
+
+console.log(typeof heros);
+console.log(typeof myFunction);
+console.log(typeof id);
+
+console.log(typeof anotherId);
+
+console.log(typeof bigNumber);
+
+console.log(typeof outsideTemp);
+
+console.log(typeof userEmail);
