@@ -1,0 +1,32 @@
+/*
+MEMORY
+1) stack(primitive data )
+2) heap(non primitive data )
+
+*/
+
+
+// stack is used for primitive datatpes.... when we use stack memory then the variable which we declare uska copy milta hai
+//  Heap is used for non primitive  datatypes ....when we use heap memory then the variable which we declare uska refrence milta hai..to kuch bhi changes lkarte hai to vo directly original place pe hota hai.
+// niche ke example me hum dekh sakte hai ki jab stack wala value change hua to uska copy mila but stack wala value change kiya to directly original value change ho gaya
+
+
+let myYoutube ="hiteshchoudharydotcom"
+let anotherName = myYoutube
+// console.log(anotherName)
+
+anotherName = "chaiaurcode"
+
+console.log(myYoutube);
+console.log(anotherName);
+
+let userOne ={
+    email:"priya123goggle.com",
+    upi:"user@ybl"
+}
+let userTwo=userOne
+
+userTwo.email ="priyasingh123gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
