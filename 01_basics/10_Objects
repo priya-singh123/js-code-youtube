@@ -1,0 +1,63 @@
+// Singleton eg. constructor...eg const tinderUser = new Object()
+// NonSingleton eg.const tinderUser = {}
+
+//Object.create
+
+//Object Literals
+
+const mySys = Symbol("key1")
+
+const JsUser ={
+
+    name: "Hitesh",
+    "fullname": "Hitesh Choudhary",
+    [mySys] : "mykey1",
+    location:"Jaipur",
+    email: "hitesh@google.com",
+    isLoggedIn: false,
+    lastLoginDays:["Monday", "Saturday"]
+}
+
+
+
+/// we usually print anything by console.log(JsUser.name) but this is not corresct way ..... Proper way is to put square bracket with double invereted comma ,for sysbol datatype we dont neeed to put datatype**console.log(JsUser["name"]**)
+
+console.log(JsUser.name)
+console.log(JsUser["name"])
+
+console.log(JsUser["email"])
+console.log(JsUser.fullname)
+console.log(JsUser["full name"])
+console.log(JsUser.email)
+console.log(JsUser.age)
+console.log(JsUser.isLoggedIn)
+console.log(JsUser.lastLoginDays)
+console.log(JsUser.location)
+console.log(JsUser.mySys)
+console.log(JsUser[mySys])
+console.log(typeof JsUser.mySys)
+console.log(JsUser)
+
+
+JsUser.email ="hitesh@gmail.com"
+console.log(JsUser["email"])
+
+// i want that no one should change my gmail not even me than will freeze it
+
+// Object.freeze(JsUser) // we can see ki just bcoz of freeze we cant change it 
+
+
+JsUser.email ="hitesh1213334@gmail.com"
+console.log(JsUser["email"])
+
+JsUser.greeting =function(){
+
+    console.log("hello");
+}
+
+JsUser.greetingTwo =function(){
+    console.log(`hello everyone ${this.name}`)
+
+}
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());

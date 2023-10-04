@@ -1,7 +1,10 @@
 // const coding = ["js", "ruby", "java", "python", "cpp"]
 
 
+// for each me return value nhi milna
+
 // const values = coding.forEach( (item) => {
+
 //     //console.log(item);
 //     return item
 // } )
@@ -9,6 +12,9 @@
 // console.log(values);
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+//filter me jo jo value condition ke according hogi vo return ki jayegi nahi to nahi ki jayegi
+// filter me agar scope matlab cury braces agar open karenge tab return keyword likhna hi padega 
 
 // const newNums = myNums.filter( (num) => {
 //     return num > 4
