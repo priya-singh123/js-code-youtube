@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Learning</title>
+    <style>
+      .bg-black {
+        background-color: black;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  /workspaces/js-code-youtube/02_advance/02_ALL_DOM_SELECTOR.html
+
+  <body class="bg-black">
+    <div>
+      <h1 id="title" class="heading">
+        DOM learning on chai aur code<span style="display: none"
+          >Test text</span
+        >
+      </h1>
+      <h2>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quo
+        molestiae? Eveniet praesentium eaque quidem perferendis cupiditate,
+        consequatur perspiciatis sunt!
+      </h2>
+      <h2>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quo
+        molestiae? Eveniet praesentium eaque quidem perferendis cupiditate,
+        consequatur perspiciatis sunt!
+      </h2>
+      <h2>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quo
+        molestiae? Eveniet praesentium eaque quidem perferendis cupiditate,
+        consequatur perspiciatis sunt!
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor rem nulla
+        pariatur distinctio, laborum labore fuga optio consequatur ipsum
+        repellat.
+      </p>
+      <!-- <input type="password" name="" id="> -->
+      <ul>
+        <li class="listItem">One</li>
+        <li class="listItem">two</li>
+        <li class="listItem">three</li>
+      </ul
+    </div>
+  </body>
+</html>
+
+
+<!-- HTML COLLECTION
+
+    // html collection is diffrent than nodelist.. there is no looping option in this so if we want to 
+    apply any lopping option than we will have to convert it to array
+
+document.getElementsByClassName('listItem')
+
+HTMLCollection(3) [li.listItem, li.listItem, li.listItem]0: li.listItem1: li.listItem2: li.listItemlength: 3[[Prototype]]: HTMLCollection
+
+
+/// HOW TO CONVERT HTML COLLECTION TO ARRAY
+
+document.getElementsByClassName('listItem')
+const collectionlist=document.getElementsByClassName('listItem')
+
+Array.from(collectionlist)
+const myConvertedArray=Array.from(collectionlist)
+
+myConvertedArray.forEach(function(li){
+li.style.color="blue"
+    
+})
+
+
+
+
+ -->
+
+<!-- title.textContent
+          DOM learning on chai aur codeTest text\n        '
+title.textContent
+'\n            DOM learning on chai aur codeTest text\n        '
+title.innerText
+'DOM learning on chai aur code'
+title.innerText
+'DOM learning on chai aur code' 
+
+
+
+ title.innerText= in inner text only visible part is shown
+
+title.textContent= All the part is visible even which is displayed none 
+
+title.innerHTML=in this everything is visible even if any html tag is written that will also visible
+
+
+  
+
+console.log(document)
+VM2806:1 #document
+undefined
+title.style.borderRadius='15px'
+'15px'
+title.style.padding='15px'
+'15px'
+title.style.backgroundColor='green'
+'green'
+const title=document.getElementById('title')
+undefined
+document.getElementById('title')
+<h1 id=​" title" class=​"heading" style=​"border-radius:​ 15px;​ padding:​ 15px;​ background-color:​ green;​">​…​</h1>​
+        document.getElementById('title').setAttribute('class','test heading' )
+        undefined
+        document.getElementById('title').setAttribute('class','test')
+        undefined
+        document.getElementById('title').getAttribute('class')
+        'test'
+        document.getElementById('title').className
+        'test'
+        document.getElementById('title').id
+        'title'
+        document.getElementById('title')
+        <h1 id=​"title" class=​"test" style=​"border-radius:​ 15px;​ padding:​ 15px;​ background-color:​ green;​">​…​
+        </h1>​
+        document.getElementById('firstHeading').innerHTML="<h1>Chai aur Code</h1>"
+        VM3611:1 Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')
+        at <anonymous>:1:50
+            (anonymous) @ VM3611:1
+            document.getElementById('firstHeading')
+            null
+            console.log(document.links[2])
+            VM3848:1 undefined
+            undefined
+            console.log(document.links)
+            VM3925:1 HTMLCollection []
+            undefined
+            console.log(document.baseURI)
+            VM3989:1
+            https://silver-space-system-7jw6x49r97cx764-5500.app.github.dev/js-code-youtube/02_advance/02_ALL_DOM_SELECTOR.html
+            undefined
+            console.log(document)
+            VM4119:1 #document
+            undefined
+           -->
+
+<!-- document.querySElector
+undefined
+document.querySelector('h2')
+<h2>​…​</h2>​"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quo molestiae? Eveniet praesentium eaque quidem perferendis cupiditate, consequatur perspiciatis sunt!"</h2>​
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector('.heading')
+<h1 id=​"title" class=​"heading">​…​</h1>​ 
+
+document.querySelector('input[type="password"]');
+<input type=​"password" name id>​
+document.querySelector('p:first-child');
+null
+
+
+
+-->
+
+
+<!--
+    ***QUERYSELECTOR****
+    
+    
+    document.querySelector('ul')
+<ul>​…​</ul>​
+const myul=document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li>​…​</li>​::marker​"One"</li>​
+const turnGreen = myul.querySelector('li')
+undefined
+turnGreen.style.padding="10px"
+'10px'
+turnGreen.innerText
+'One'
+turnGreen.innerHTML
+'One'
+turnGreen.innerText="five"
+'five' 
+-->
+
+<!-- 
+QUERYSELECTORALL
+document.querySelectorAll('li')
+const liList=document.querySelectorAll('li')
+liList
+liList.style.color = 'green'// this will work
+
+liList.style.color = 'green'
+
+
+
+
+ -->
+
+ <!--  NODELIST
+nodelist is not array ..there are some array property which can be used in nodelist like for each nd index like [0],[2]...
+we can convert nodelist to arraylist to use more properties like map n all
+
+
+liList
+NodeList(3) [li, li, li]
+liList.forEach(function(li){})
+undefined
+liList.forEach(function(li){
+    li.style.backgroundColor="green"
+})
+
+-->
+
