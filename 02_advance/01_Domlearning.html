@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 class="heading"> DOM learning on chai aur code</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Aperiam ratione beatae ipsa dolor dignissimos, consequatur 
+             nulla unde omnis ea dolores!</p>
+    </div>
+
+    <script>
+
+        document.getElementById("firstheading");
+    </script>
+    
+</body>
+</html>
+
+// diagram for above page
+
+
+// im using pre tag so that i can write the way i wnat to see 
+
+<pre>
+                                       window
+                                         |
+                                       Document
+                                          |
+                                        HTML  
+                                          |
+                    HEAD                                          BODY
+                     |                                              |
+                        
+            title         Meta                                     Div
+                                                           |                 |            |
+                                                           h1                 P          Attribute
+                                                     |         |              |
+                                                Attribute    textnode       textnode
+
+            |               |
+        textnode        Attribute 
+
+
+
+
+
+
+</pre>
+/*
+console.log(document)
+VM1160:1 #document<!DOCTYPE html><html class=​"client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-zebra-design-disabled vector-feature-custom-font-size-clientpref-disabled vector-feature-client-preferences-disabled vector-feature-typography-survey-disabled vector-animations-ready ve-available" lang=​"en" dir=​"ltr">​<head>​…​</head>​<body class=​"skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Brendan_Eich rootpage-Brendan_Eich skin-vector-2022 action-view uls-dialog-sticky-hide">​…​</body>​</html>​
+undefined
+console.log(document.baseURI)
+VM1384:1 https://en.wikipedia.org/wiki/Brendan_Eich#Career
+undefined
+console.log(document.links)
+VM1592:1 HTMLCollection(728) [a.mw-jump-link, a, a, a, a, a, a, a, a, a, a, a, a, a.mw-logo, a.cdx-button.cdx-button--fake-button.cdx-button--fake-button--enabled.cdx-button--weight-quiet.cdx-…, a, a, a, a, a, a, a, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.wbc-editpage, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a.mw-file-description, a, a, a, a, a.external.text, a, a, a, a, a, a, a, a.mw-redirect, a, …]
+undefined
+console.log(document.links[2])
+VM1646:1 <a href=​"/​wiki/​Wikipedia:​Contents" title=​"Guides to browsing Wikipedia">​…​</a>​flex
+undefined
+document.getElem
+undefined
+document.getElementById('firstHeading')
+<h1 id=​"firstHeading" class=​"firstHeading mw-first-heading">​<span class=​"mw-page-title-main">​Brendan Eich​</span>​</h1>​
+document.getElementById('firstHeading').innerHTML="<h1>Chai aur Code</h1>"
+'<h1>Chai aur Code</h1>'
+*/
